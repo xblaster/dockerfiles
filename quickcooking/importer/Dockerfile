@@ -1,3 +1,17 @@
 FROM xblaster/generic_node
 
 RUN apt-get install -y imagemagick tesseract-ocr-fra tesseract-ocr
+
+
+
+
+
+RUN git clone https://github.com/xblaster/quickCooking3-importer
+WORKDIR quickCooking3-importer
+
+RUN npm config set registry http://registry.npmjs.org/
+
+RUN npm install
+
+
+#CMD node app.js
