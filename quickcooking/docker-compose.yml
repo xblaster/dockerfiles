@@ -1,0 +1,15 @@
+
+
+
+ui:
+  container_name: qc-ui
+  image: 
+  ports:
+   - "9000:9000"
+  volumes:
+   - .:/code
+  links:
+   - redis
+storage:
+  image: elasticsearch
+  container_name: qc-storage
