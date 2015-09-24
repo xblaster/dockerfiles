@@ -1,15 +1,21 @@
-
-
-
+storage: 
+  image: ubuntu:latest
+  container_name: qc-storage
+  volumes:
+    - /volumes/qc/images:/images
 ui:
   container_name: qc-ui
-  image: 
+  image: xblaster/quickcooking-ui
   ports:
    - "9000:9000"
-  volumes:
-   - .:/code
+  environment:
+   - elasticHost=elastic:9200
+   - imageVolume=/image';
+  volumes_from:
+   - storage
   links:
-   - redis
-storage:
+   - storage
+   - elastic
+elastic:
   image: elasticsearch
-  container_name: qc-storage
+  container_name: qc-elastic

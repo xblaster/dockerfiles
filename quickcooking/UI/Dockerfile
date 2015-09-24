@@ -8,7 +8,7 @@ WORKDIR quickCooking3-UI
 RUN npm config set registry http://registry.npmjs.org/
 
 RUN npm install
-RUN bower install
+RUN bower install --allow-root
 
 EXPOSE 9000
 
