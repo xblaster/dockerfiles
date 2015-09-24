@@ -10,7 +10,7 @@ ui:
    - "9000:9000"
   environment:
    - elasticHost=elastic:9200
-   - imageVolume=/image';
+   - imageVolume=/images';
   volumes_from:
    - storage
   links:
