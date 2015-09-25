@@ -12,4 +12,4 @@ RUN bower install --allow-root
 
 EXPOSE 9000
 
-CMD grunt serve
+CMD grunt serve:dist
