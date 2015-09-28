@@ -8,6 +8,7 @@ WORKDIR quickCooking3-importer
 RUN npm config set registry http://registry.npmjs.org/
 
 RUN git pull
+RUN git pull
 
 RUN npm install
 RUN npm install -g gulp
