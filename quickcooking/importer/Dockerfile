@@ -10,4 +10,6 @@ RUN npm config set registry http://registry.npmjs.org/
 RUN npm install
 RUN npm install -g gulp
 
+RUN git pull
+
 #CMD gulp
