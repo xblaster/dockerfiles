@@ -6,6 +6,7 @@ RUN git clone https://github.com/xblaster/quickCooking3-UI
 WORKDIR quickCooking3-UI
 
 RUN git pull
+RUN git pull
 
 RUN npm config set registry http://registry.npmjs.org/
 
