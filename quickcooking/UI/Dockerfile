@@ -11,6 +11,7 @@ RUN git pull
 RUN npm config set registry http://registry.npmjs.org/
 
 RUN npm install
+RUN git pull
 RUN bower install --allow-root
 
 EXPOSE 9000
