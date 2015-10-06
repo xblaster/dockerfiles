@@ -8,6 +8,8 @@ RUN npm install
 RUN git pull\
     && bower install --allow-root
 
+RUN git pull
+
 EXPOSE 9000
 
 CMD grunt serve:dist
