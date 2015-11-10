@@ -1,6 +1,5 @@
 ##dockerfile-tensorflow-jupyter
 Dockerized Jupyter with tensorflow
-inspired by ermaker/tensorflow-jupyter
 
 ##Get Started
 With port forwarding:
