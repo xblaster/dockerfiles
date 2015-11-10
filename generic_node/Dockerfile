@@ -19,18 +19,12 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
         && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
         && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc \
         && npm install -g npm@"$NPM_VERSION" \
-        && npm cache clear
+        && npm cache clear\
+        && apt-get update && apt-get install -y\
+        ruby-dev\
+        rubygems\ 
+        build-essential \
+        git\
+        && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-
-
-RUN apt-get update && apt-get install -y \
-  ruby-dev \
-  build-essential \
-  git
-
-RUN apt-get install -y rubygems
-
-RUN gem install compass
-
-RUN npm install -g bower
-RUN npm install -g grunt-cli
+RUN gem install compass && npm install -g bower && npm install -g grunt-cli

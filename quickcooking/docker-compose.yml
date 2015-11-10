@@ -1,21 +1,16 @@
-storage: 
-  image: ubuntu:latest
-  container_name: qc-storage
-  volumes:
-    - /volumes/qc/images:/images
 ui:
   container_name: qc-ui
   image: xblaster/quickcooking-ui
   ports:
-   - "9000:9000"
+   - 9000:9000
   environment:
-   - elasticHost=elastic:9200
-   - imageVolume=/images';
-  volumes_from:
-   - storage
+   - ELASTIC=elastic:9200
+   - imageVolume=/images
+  volumes:
+    - /volumes/qc/images:/images
   links:
-   - storage
    - elastic
+  command: "grunt serve:dist --force"
 elastic:
   image: elasticsearch
   container_name: qc-elastic
