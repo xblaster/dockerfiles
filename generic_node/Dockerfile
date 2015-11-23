@@ -24,6 +24,6 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
         rubygems\ 
         build-essential \
         git\
-        && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+        
 
 RUN gem install compass && npm install -g bower && npm install -g grunt-cli
