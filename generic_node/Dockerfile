@@ -13,8 +13,6 @@ ENV NODE_VERSION 5.1.0
 
 # OLD    line for NPM install     && npm install -g npm@"$NPM_VERSION" \
 # OLD     && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc \
-
-
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
         && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
         && npm install -g npm\
@@ -24,6 +22,5 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
         rubygems\ 
         build-essential \
         git
-        
 
 RUN gem install compass && npm install -g bower && npm install -g grunt-cli
