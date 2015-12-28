@@ -7,7 +7,7 @@ RUN git pull\
     && bower install --allow-root
 
 RUN git pull
-RUN npm install -g yo grunt-cli bower generator-angular-fullstack
+RUN npm install -g yo grunt-cli generator-angular-fullstack
 
 
 EXPOSE 9000
