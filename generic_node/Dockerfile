@@ -1,5 +1,5 @@
 # Pull base image.
-FROM ubuntu:latest
+FROM buildpack-deps:precise-scm
 
 MAINTAINER xblaster@lo2k.net
 
