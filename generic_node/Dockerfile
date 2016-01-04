@@ -1,5 +1,5 @@
 # Pull base image.
-FROM buildpack-deps:precise-scm
+FROM buildpack-deps:precise
 
 MAINTAINER xblaster@lo2k.net
 
