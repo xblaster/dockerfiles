@@ -16,6 +16,8 @@ RUN /bin/bash -c "source activate /opt/conda/envs/python2/ && pip install https:
 
 RUN /bin/bash -c "source activate /opt/conda/envs/python2/ && pip install Pillow==2.9.0 matplotlib sklearn"
 
+USER root
+
 VOLUME /notebook
 WORKDIR /notebook
 EXPOSE 8888
