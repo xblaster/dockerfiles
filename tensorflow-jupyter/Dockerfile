@@ -1,17 +1,16 @@
+
 # Pull base image.
-FROM jupyter/all-spark-notebook
+FROM jupyter/all-spark-notebook:9cb6443840b2
 MAINTAINER xblaster@lo2k.net
 
 
 #RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN /bin/bash -c "source activate /opt/conda/envs/python2/ && pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl"
 
-USER root
 RUN apt-get update
 RUN apt-get install -y libx11-dev
 
 
-USER jovyan
 RUN /bin/bash -c "source activate /opt/conda/envs/python2/ && pip install Pillow==2.9.0 matplotlib sklearn"
 
 
