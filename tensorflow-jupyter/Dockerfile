@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stable
 MAINTAINER Jerome WAX "xblaster@lo2k.net"
 
 # Run all ubuntu updates and apt-get installs
