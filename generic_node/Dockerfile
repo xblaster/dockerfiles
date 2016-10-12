@@ -17,3 +17,5 @@ RUN apt-get update && apt-get install -y\
 
 RUN gem install compass && npm install -g bower && npm install -g grunt-cli
 
+RUN npm install -g jspm
+
