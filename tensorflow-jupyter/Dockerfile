@@ -55,7 +55,7 @@ WORKDIR /home/condauser/notebooks
 
 #RUN export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp34-cp34m-linux_x86_64.whl
 
-RUN /bin/bash -c "$PY3PATH/pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp34-cp34m-linux_x86_64.whlL"
+RUN /bin/bash -c "$PY3PATH/pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp34-cp34m-linux_x86_64.whl"
 RUN /bin/bash -c "$PY3PATH/pip install Pillow==2.9.0 matplotlib sklearn"
 
 USER root
