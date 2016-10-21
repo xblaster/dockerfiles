@@ -45,6 +45,7 @@ ENV PY3PATH=/home/condauser/anaconda3/bin
 
 # Setup our environment for running the ipython notebook
 # Setting user here makes sure ipython notebook is run as user, not root
+
 EXPOSE 8888
 USER condauser
 ENV HOME=/home/condauser
@@ -53,7 +54,13 @@ ENV USER=condauser
 WORKDIR /home/condauser/notebooks
 
 #RUN export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp34-cp34m-linux_x86_64.whl
+RUN $PY3PATH/pip install -I --upgrade setuptools
+RUN $PY3PATH/pip install --upgrade pip
 RUN /bin/bash -c "$PY3PATH/pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp35-cp35m-linux_x86_64.whl"
+
+#RUN wget https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp35-cp35m-linux_x86_64.whl
+#RUN pip install tensorflow-0.11.0rc0-cp35-cp35m-linux_x86_64.whl
+
 RUN /bin/bash -c "$PY3PATH/pip install Pillow==2.9.0 matplotlib sklearn"
 
 USER root
