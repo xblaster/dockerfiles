@@ -1,0 +1,8 @@
+leos:
+      image: xblaster/leos
+      ports: 
+        - "9090:9090"
+        - "8082:8082"
+      volumes:
+        - $PWD/script/:/script/
+      entrypoint : "bash /script/launch.sh"
