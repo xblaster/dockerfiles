@@ -3,6 +3,7 @@ leos:
       ports: 
         - "9090:9090"
         - "8082:8082"
+        - "8080:8080"       
       volumes:
         - $PWD/script/:/script/
       entrypoint : "bash /script/launch.sh"

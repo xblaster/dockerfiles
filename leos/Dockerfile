@@ -10,4 +10,4 @@ RUN cd /src/tools/database-h2 && mvn clean install
 RUN cd /src/tools/cmis/chemistry-opencmis-server-inmemory && mvn clean install
 RUN cd /src && mvn clean install
 
-VOLUME /src/
+#VOLUME /src/
